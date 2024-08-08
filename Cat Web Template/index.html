@@ -163,6 +163,13 @@
             border-radius: 0.5rem; /* Rounded corners */
             background-color: #994509; /* White background for better contrast */
             transition: transform 0.3s; /* Smooth transition */
+            display: flex;
+            flex-direction: column; /* Align children vertically */
+            justify-content: space-between; /* Space between children */
+        }
+
+        .care-tip .cat-button {
+            margin-top: auto; /* Push the button to the bottom */
         }
         .care-tip:hover {
             transform: scale(1.05); /* Slightly enlarge on hover */
@@ -215,6 +222,9 @@
             display: flex; /* Added for Flexbox */
             flex-direction: column; /* Align children vertically */
             justify-content: space-between; /* Space between children */
+        }
+        .cat .cat-button {
+            margin-top: auto; /* Push the button to the bottom */
         }
         .cat img {
             max-width: 100%;
@@ -440,5 +450,9 @@
             <p>Blog 4</p>
         </div>
     </section>
+
+    <footer class="footer text-center">
+        <p>&copy; 2024 All About Cats. All rights reserved.</p>
+    </footer>
 </body>
 </html>
