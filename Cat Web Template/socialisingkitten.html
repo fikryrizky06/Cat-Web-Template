@@ -4,8 +4,71 @@
     <meta charset="utf-8">
     <title>Document</title>
     <link rel="stylesheet" href="kitten.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
+        <style>
+            body {
+                overflow-x: hidden;
+            }
+            .nav-item {
+            font-family: 'Roboto', serif;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: color 0.3s, background-color 0.3s; /* Added transition for smooth color change */
+        }
+        .nav-item:hover {
+            color: #8B4513; /* Brown color on hover */
+            background-color: #f0e68c; /* Optional: light background color on hover for better visibility */
+        }
+            .nav-container {
+                position: absolute;
+                top: 0px;
+                left: 59.4%;
+                transform: translateX(-50%);
+                width: 100%;
+                border-radius: 0 0 1rem 1rem;
+                z-index: 1000;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 2rem;
+                font-size: large;
+            }
+            .logo-container {
+                display: flex;
+                align-items: center;
+            }
+            .logo-img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-right: 0.5rem;
+            }
+            .logo-text {
+                font-family: 'Roboto', serif;
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: #1f2937;
+            }
+        </style>
+        <nav class="py-3 nav-container">
+        <div class="logo-container">
+            <img src="./img/logo-kucing.png" alt="Logo" class="logo-img">
+            <span class="logo-text">PetKart</span>
+        </div>
+        <div class="container mx-auto flex justify-center space-x-10">
+            <a href="index.html" class="text-gray-800 nav-item font-bold">Home</a>
+            <a href="index.html#care" class="text-gray-800 nav-item font-bold">Care</a>
+            <a href="index.html#our-cats" class="text-gray-800 nav-item font-bold">Cats</a>
+            <a href="index.html#about-us" class="text-gray-800 nav-item font-bold">About us</a>
+            <a href="index.html#blog" class="text-gray-800 nav-item font-bold">Blogs</a>
+        </div>
+    </nav> 
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="container">
         <div class="text-content">
             <h1>Socialising Kittens</h1>
@@ -18,6 +81,5 @@
             <img src="./img/fighting cats.jpeg" alt="cat">
         </div>
     </div>
-    <a href="index.html#care" class="previous round">&#8249;</a>
 </body>
 </html>
