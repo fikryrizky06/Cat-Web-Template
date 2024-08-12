@@ -8,20 +8,79 @@
 </head>
 <body>
         <style>
-            body {
-                overflow-x: hidden;
+           @media (max-width: 768px){
+            .hamburger-menu {
+              display: block;
+              z-index: 1001;
+              padding:20px;
+              
             }
-            .nav-item {
-            font-family: 'Roboto', serif;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            transition: color 0.3s, background-color 0.3s; /* Added transition for smooth color change */
+
+        .image-container{
+      height:800px;
+      width:900px;
+    }
+      .text-content{
+        width:900px;
+        height:900px;
+        font-size: 31px;
+    }
+    .gallery{
+        width:900px;
+        height:100%;
+        margin-left:35px;
+    }
+
+
+    #nav-items {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background-color: #fcfbd1;
+        flex-direction: column;
+        padding: 1rem;
+        z-index: 999;
+    }
+    .open{
+        display: flex !important;
+        flex-direction: column;
+
+    }
+    
+        
+        #nav-items {
+            display: none;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background-color: #fcfbd1;
+            flex-direction: column;
+            padding: 1rem;
+            z-index: 999;
         }
-        .nav-item:hover {
-            color: #8B4513; /* Brown color on hover */
-            background-color: #f0e68c; /* Optional: light background color on hover for better visibility */
+        .open {
+        display: flex !important; /* Atau block, tergantung bagaimana Anda ingin menampilkan elemen ini */
+        flex-direction: column;
+    }
+
+}
+     body {
+            overflow-x: hidden;
         }
-            .nav-container {
+        .nav-item {
+        font-family: 'Roboto', serif;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        transition: color 0.3s, background-color 0.3s; /* Added transition for smooth color change */
+    }
+    .nav-item:hover {
+        color: #8B4513; /* Brown color on hover */
+        background-color: #f0e68c; /* Optional: light background color on hover for better visibility */
+    }
+        .nav-container {
             position: fixed;
             top: 0px;
             left: 50%;
@@ -37,43 +96,50 @@
             font-size: large;
             background-color:#F8F695;
         }
-            .logo-container {
-                display: flex;
-                align-items: center;
-            }
-            .logo-img {
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                margin-right: 0.5rem;
-            }
-            .logo-text {
-                font-family: 'Roboto', serif;
-                font-size: 1.5rem;
-                font-weight: bold;
-                color: #1f2937;
-            }
-            .ftr {
-                position: absolute;
-            }
-        </style>
-        <nav class="py-3 nav-container">
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+        .logo-text {
+            font-family: 'Roboto', serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1f2937;
+        }
+        .ftr{
+            position: absolute;
+        }
+    </style>
+    <nav class="py-3 nav-container">
         <div class="logo-container">
             <img src="./img/logo-kucing.png" alt="Logo" class="logo-img">
             <span class="logo-text">PetKart</span>
         </div>
-        <div class="container mx-auto flex justify-center space-x-10">
+        <div class="hamburger-menu md:hidden">
+            <button id="hamburger-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="nav-items" class="navv hidden md:flex">
             <a href="index.html" class="text-gray-800 nav-item font-bold">Home</a>
             <a href="index.html#care" class="text-gray-800 nav-item font-bold">Care</a>
             <a href="index.html#our-cats" class="text-gray-800 nav-item font-bold">Cats</a>
             <a href="index.html#about-us" class="text-gray-800 nav-item font-bold">About us</a>
             <a href="index.html#blog" class="text-gray-800 nav-item font-bold">Blogs</a>
         </div>
-    </nav> 
+    </nav>
     <br>
     <br>
     <br>
-    <br>
+    <br>    
     <center>
     <div class="image-container">
             <img src="./img/cat3readmore.jpeg" alt="cat">

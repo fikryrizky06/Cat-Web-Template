@@ -8,7 +8,66 @@
 </head>
 <body>
     <style>
-        body {
+        @media (max-width: 768px){
+            .hamburger-menu {
+              display: block;
+              z-index: 1001;
+              padding:20px;
+              
+            }
+
+    .image-container{
+      height:600px;
+      width:900px;
+    }
+      .text-content{
+        width:900px;
+        height:900px;
+        font-size: 31px;
+    }
+    .gallery{
+        width:900px;
+        height:100%;
+        margin-left:35px;
+    }
+
+
+    #nav-items {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background-color: #fcfbd1;
+        flex-direction: column;
+        padding: 1rem;
+        z-index: 999;
+    }
+    .open{
+        display: flex !important;
+        flex-direction: column;
+
+    }
+    
+        
+        #nav-items {
+            display: none;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background-color: #fcfbd1;
+            flex-direction: column;
+            padding: 1rem;
+            z-index: 999;
+        }
+        .open {
+        display: flex !important; /* Atau block, tergantung bagaimana Anda ingin menampilkan elemen ini */
+        flex-direction: column;
+    }
+
+}
+     body {
             overflow-x: hidden;
         }
         .nav-item {
@@ -62,14 +121,21 @@
             <img src="./img/logo-kucing.png" alt="Logo" class="logo-img">
             <span class="logo-text">PetKart</span>
         </div>
-        <div class="container mx-auto flex justify-center space-x-10">
+        <div class="hamburger-menu md:hidden">
+            <button id="hamburger-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="nav-items" class="navv hidden md:flex">
             <a href="index.html" class="text-gray-800 nav-item font-bold">Home</a>
             <a href="index.html#care" class="text-gray-800 nav-item font-bold">Care</a>
             <a href="index.html#our-cats" class="text-gray-800 nav-item font-bold">Cats</a>
             <a href="index.html#about-us" class="text-gray-800 nav-item font-bold">About us</a>
             <a href="index.html#blog" class="text-gray-800 nav-item font-bold">Blogs</a>
         </div>
-    </nav> 
+    </nav>
     <br>
     <br>
     <br>
@@ -177,7 +243,7 @@
     </div>
     <div class="ftr w-full bg-gray-800">
         <div class="container mx-auto py-4 px-6 flex flex-col md:flex-row items-center justify-between">
-            <span class="text-sm text-gray-400 sm:text-center">© 2023™. All Rights Reserved.</span>
+            <span class="text-sm text-gray-400 sm:text-center">©️ 2023™️. All Rights Reserved.</span>
             <div class="flex mt-4 space-x-6 sm:justify-center md:mt-0">
                 <!-- Social media icons, replace # with actual links -->
                 <a href="#" class="text-gray-400 hover:text-white">
@@ -214,6 +280,21 @@
         </div>
     </div>
 </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navItems = document.getElementById('nav-items');
+
+        hamburgerBtn.addEventListener('click', function () {
+            navItems.classList.toggle('open');
+        });
+    });
+    hamburgerBtn.addEventListener('click', function () {
+    alert('Button clicked!');
+    navItems.classList.toggle('open');
+});
+
+</script>
 </body>
 
 </html>
