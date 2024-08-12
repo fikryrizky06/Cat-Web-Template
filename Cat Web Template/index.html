@@ -9,47 +9,32 @@
         html {
             scroll-behavior: smooth;
         }
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .nav-item {
-                margin-bottom: 0.5rem;
-            }
-            .main-title {
-                font-size: 2rem;
-            }
-            .care-tips-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            .care-tips-row {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            .cats-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            .about-us-content {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            .blogs {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-20px); }
-            60% { transform: translateY(-10px); }
-        }
+        /* Menyembunyikan navbar dan hanya menampilkan hamburger di layar kecil */
+/* Menyembunyikan menu awalnya pada layar kecil */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        z-index: 1001;
+    }
+    #nav-items {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background-color: #fcfbd1;
+        flex-direction: column;
+        padding: 1rem;
+        z-index: 999;
+    }
+}
+
+/* Membuat menu terlihat ketika diklik */
+#nav-items.open {
+    display: flex;
+}
+
+
         .fade-in {
             animation: fadeIn 1s ease-in-out;
         }
@@ -79,7 +64,7 @@
             left: 50%;
             transform: translateX(-50%);
             width: 100%;
-            height: 80px;
+            height: 65px;
             border-radius: 0 0 1rem 1rem;
             z-index: 1000;
             display: flex;
@@ -130,6 +115,7 @@
             align-items: center;
             position: relative;
             z-index: 0; /* Ensure it is under the navbar */
+            padding-left: 30px;
         }
         .care-tips-section {
             background-color: #F8F695;
@@ -329,6 +315,9 @@
         .ftr{
             position: absolute;
         }
+        .navv{
+            gap: 30px;
+        }
     </style>
 </head>
 <body class="flex flex-col min-h-screen scroll-smooth">
@@ -336,17 +325,26 @@
     <!-- Navigation Bar -->
     <nav class="py-3 nav-container">
         <div class="logo-container">
-            <img src="./img/logo-kucing.png" alt="Logo" class="logo-img">    <!-- Replace with your logo image path -->
+            <img src="./img/logo-kucing.png" alt="Logo" class="logo-img">
             <span class="logo-text">PetKart</span>
         </div>
-        <div class="container mx-auto flex justify-center space-x-10">
+        <div class="hamburger-menu md:hidden">
+            <button id="hamburger-btn">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <div id="nav-items" class="navv hidden md:flex">
             <a href="#" class="text-gray-800 nav-item font-bold">Home</a>
             <a href="#care" class="text-gray-800 nav-item font-bold">Care</a>
             <a href="#our-cats" class="text-gray-800 nav-item font-bold">Cats</a>
             <a href="#about-us" class="text-gray-800 nav-item font-bold">About us</a>
             <a href="#blog" class="text-gray-800 nav-item font-bold">Blogs</a>
         </div>
-    </nav> 
+    </nav>
+    
+    
     <!-- Main Section -->
     <main class="main-section fade-in">
         <div class="container mx-auto flex items-center justify-start"> <!-- Changed justify-center to justify-start -->
@@ -572,6 +570,21 @@
         </div>
     </div>
 </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navItems = document.getElementById('nav-items');
+
+        hamburgerBtn.addEventListener('click', function () {
+            navItems.classList.toggle('open');
+        });
+    });
+    hamburgerBtn.addEventListener('click', function () {
+    alert('Button clicked!');
+    navItems.classList.toggle('open');
+});
+
+</script>
 
 </body>
 </html>

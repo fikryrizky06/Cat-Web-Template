@@ -10,7 +10,7 @@ body{
   
 
 .text-content {
-  width: 40%;
+  width: 80%;
   padding: 20px;
   background-color: white;
   border-radius: 8px;
@@ -31,4 +31,9 @@ body{
 }
 .ftr {
   position: absolute;
+}
+.gallery{
+  margin-left: 130px;
+  width: 80%;
+  height: 20%;
 }
