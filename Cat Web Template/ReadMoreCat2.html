@@ -5,6 +5,8 @@
     <title>Luna</title>
     <link rel="stylesheet" href="kitten.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
 </head>
 <body>
         <style>
@@ -77,7 +79,7 @@
         }
         .nav-item:hover {
             color: #8B4513; /* Brown color on hover */
-            background-color: #f0e68c; /* Optional: light background color on hover for better visibility */
+            
         }
             .nav-container {
             position: fixed;
@@ -86,14 +88,14 @@
             transform: translateX(-50%);
             width: 100%;
             height: 80px;
-            border-radius: 0 0 1rem 1rem;
+            border-radius: 0 0;
             z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 2rem;
             font-size: large;
-            background-color:#F8F695;
+            background-color:#ffb64d;
         }
             .logo-container {
                 display: flex;
@@ -114,6 +116,15 @@
             .ftr {
                 position: absolute;
             }
+            .content{
+            width:100%;
+            margin:auto;
+            text-align: center;
+            margin-left: 120px;
+        }
+        .image-container{
+            width:80%
+        }
         </style>
     <nav class="py-3 nav-container">
         <div class="logo-container">
@@ -140,9 +151,9 @@
             <img src="./img/cat2readmore.jpeg" alt="cat">
         </div>
         <br>
-    <div class="container">
-        <div class="text-content font-bold">
-            <h1>Luna</h1>
+    <div class="content">
+        <div class="text-content">
+            <h1 class= "font-bold"style="text-align:center; font-size:40px; font:bold;">Luna</h1>
             <p>Luna is a graceful and enchanting cat with an aura of calm and elegance. Her fur is a sleek, silvery gray or deep, velvety black, reminiscent of the night sky, with a soft, plush texture that feels luxurious to the touch. Her large, round eyes are a mesmerizing shade of blue or green, reflecting her gentle and serene nature.</p>
             <p>Luna is known for her quiet, contemplative demeanor. She often finds cozy, sunlit spots to lounge and observe her surroundings with a peaceful gaze. Despite her calm exterior, Luna has a playful side that emerges during quiet moments of the day. She enjoys chasing after laser pointers or pouncing on feather toys with a delicate, precise grace.</p>
             <p>Her affectionate nature is expressed through gentle nudges and soft purrs. Luna loves to curl up on laps or snuggle close to her human companions, offering warmth and comfort. She’s a bit of a dreamer, often lost in her own little world but always ready to provide companionship and love.</p>
@@ -152,20 +163,19 @@
     <br>
     <br>
     <div class="gallery grid grid-cols-2 gap-2">
-        <div>
+        <a href="img/cat and owner1.jpg" data-lightbox="gallery" data-title="Cat and Owner">
             <img class="rounded-lg" src="img/cat and owner1.jpg" alt="">
-        </div>
-        <div>
+        </a>
+        <a href="img/cat2.jpg" data-lightbox="gallery" data-title="Cat 2">
             <img class="rounded-lg" src="img/cat2.jpg" alt="">
-        </div>
-        <div>
+        </a>
+        <a href="img/cat2readmore.jpeg" data-lightbox="gallery" data-title="Cat 2 Read More">
             <img class="rounded-lg" src="img/cat2readmore.jpeg" alt="">
-        </div>
-        <div>
+        </a>
+        <a href="img/kcng.jpg" data-lightbox="gallery" data-title="KCNG">
             <img class="rounded-lg" src="img/kcng.jpg" alt="">
-        </div>
+        </a>
     </div>
-    <br>
     <footer class="bg-gray-900 text-white py-8">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">

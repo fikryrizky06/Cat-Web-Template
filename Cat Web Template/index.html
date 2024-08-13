@@ -82,7 +82,7 @@
     }
     .nav-item:hover {
         color: #8B4513; /* Brown color on hover */
-        background-color: #f0e68c; /* Optional: light background color on hover for better visibility */
+         /* Optional: light background color on hover for better visibility */
     }
         .nav-container {
             position: fixed;
@@ -91,7 +91,7 @@
             transform: translateX(-50%);
             width: 100%;
             height: 65px;
-            border-radius: 0 0 1rem 1rem;
+            border-radius: 0 0;
             z-index: 1000;
             display: flex;
             justify-content: space-between;
@@ -99,7 +99,14 @@
             padding: 0 2rem;
             font-size: large;
             background-color: #fcfbd1;
+            transition: background-color 0.4s ease-in-out;
         }
+        .nav-container.scrolled{
+            background-color: #ffb64d;
+            opacity: 0.98;
+        }
+
+
         .logo-container {
             display: flex;
             align-items: center;
@@ -344,6 +351,9 @@
         .navv{
             gap: 30px;
         }
+
+       
+
     </style>
 </head>
 <body class="flex flex-col min-h-screen scroll-smooth">
@@ -608,6 +618,16 @@
     hamburgerBtn.addEventListener('click', function () {
     alert('Button clicked!');
     navItems.classList.toggle('open');
+});
+</script>
+<script>
+    window.addEventListener('scroll', function() {
+    var navContainer = document.querySelector('.nav-container');
+    if (window.scrollY > 50) {
+        navContainer.classList.add('scrolled');
+    } else {
+        navContainer.classList.remove('scrolled');
+    }
 });
 
 </script>

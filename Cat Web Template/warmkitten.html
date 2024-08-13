@@ -81,6 +81,7 @@
    .image-container{
     width: 80%;
     height: 80%;
+    margin-top: 100px;
    }
         }
 
@@ -95,7 +96,7 @@
         }
         .nav-item:hover {
             color: #8B4513;
-            background-color: #f0e68c;
+
         }
         .nav-container {
             position: fixed;
@@ -104,14 +105,14 @@
             transform: translateX(-50%);
             width: 100%;
             height: 80px;
-            border-radius: 0 0 1rem 1rem;
+            border-radius: 0 0;
             z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 0 2rem;
             font-size: large;
-            background-color:#F8F695;
+            background-color:#ffb64d;
         }
         .logo-container {
             display: flex;
@@ -132,6 +133,18 @@
         .ftr {
             position: absolute;
         }
+        .content{
+            width:100%;
+            margin:auto;
+            text-align: center;
+            margin-left: 120px;
+        }
+        .image-container{
+            width:80%;
+            height:auto;
+        }
+      
+        
     </style>
     <nav class="py-3 nav-container">
         <div class="logo-container">
@@ -153,18 +166,23 @@
             <a href="index.html#blog" class="text-gray-800 nav-item font-bold">Blogs</a>
         </div>
     </nav> 
-    <div class="content">
+   
         <center>
         <div class="image-container">
             <img src="./img/cat and owner1.jpg" alt="cat">
         </div>
         <br>
-        <div class="text-content font-bold">
-            <h1>Warm Kittens</h1>
+       
+        <div class="content">
+        <div class="text-content">
+            <h1 class= "font-bold"style="text-align:center; font-size:40px; font:bold;">Warm Kittens</h1>
             <p>Keeping kittens warm is vital for their health, especially in the first few weeks when they cannot regulate their body temperature. Use heating pads specifically designed for pets, set to a safe, low temperature, and place them under a blanket or towel to prevent burns. Alternatively, hot water bottles wrapped in soft cloth can be used but need regular refilling.</p>
             <p>Create a cozy and insulated space using a sturdy box or pet carrier lined with soft, clean bedding like blankets or towels. Keep the bedding dry and change it frequently. Position the box in a draft-free area away from windows and doors. The ideal temperature for newborn kittens is between 85-90°F (29-32°C) for the first week, gradually decreasing to around 75°F (24°C) by the fourth week.</p>
             <p>Monitor the kittens' body temperature regularly. Signs of being too cold include lethargy, lack of appetite, and crying. If a kitten is too cold, warm them gently with your body heat or warm towels, avoiding rapid temperature changes. Consult a veterinarian if you have concerns about a kitten’s temperature or health.</p>
+            </div>
         </div>
+        
+    </div>
     </center>
     </div>
     <br>
