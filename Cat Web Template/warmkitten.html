@@ -4,65 +4,95 @@
     <meta charset="utf-8">
     <title>Warm Kittens</title>
     <link rel="stylesheet" href="kitten.css">
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
     <style>
-        @media (max-width: 768px){
+        @media (max-width: 768px) {
             .hamburger-menu {
-              display: block;
-              z-index: 1001;
-              padding:20px;
-              
+                display: block;
+                z-index: 1001;
+                padding: 30px;
             }
 
-    .image-container{
-      height:600px;
-      width:900px;
+            .logo-img {
+                width: 100px; /* Ubah ukuran logo */
+                height: 100px; /* Ubah ukuran logo */
+            }
+
+            .logo-text {
+                font-size: 2rem; /* Ubah ukuran teks logo */
+            }
+
+            #nav-items {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background-color: #F8F695;
+                flex-direction: column;
+                padding: 1rem;
+                z-index: 999;
+            }
+
+            .open {
+                display: flex !important;
+                flex-direction: column;
+            }
+
+            .gallery {
+                gap: 10px; /* Jarak antar gambar */
+                padding-right: 60px;
+            }
+
+            .gallery img {
+                width: 100%; 
+                height: auto;
+            }
+            .navv{
+        font-size: 40px;
     }
-      .text-content{
-        width:900px;
-        height:900px;
-        font-size: 31px;
+    .nav-item{
+        padding:10px 15px;
     }
-    .gallery{
-        width:900px;
-        height:100%;
-        margin-left:35px;
+    .nav-container{
+        padding: 25px 50px !important;
+        height:150px !important;
+    }
+    .logo-container{
+        display: flex;
+        align-items: center;
+        font-size: 36px;
+    }
+    .logo-img{
+        height:80px !important;
+        width:100px !important;
+        margin-right:15px;
+    }
+    .logo-text{
+        font-size: 50px !important;
     }
 
+   .hamburger-menu svg{
+    width:80px;
+    height:80px;
+   }
+        }
 
-    #nav-items {
-        display: none;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        right: 0;
-        background-color: #F8F695;
-        flex-direction: column;
-        padding: 1rem;
-        z-index: 999;
-    }
-    .open{
-        display: flex !important;
-        flex-direction: column;
-
-    }
-
-}
-     body {
+        body {
             overflow-x: hidden;
         }
         .nav-item {
-        font-family: 'Roboto', serif;
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
-        transition: color 0.3s, background-color 0.3s; /* Added transition for smooth color change */
-    }
-    .nav-item:hover {
-        color: #8B4513; /* Brown color on hover */
-        background-color: #f0e68c; /* Optional: light background color on hover for better visibility */
-    }
+            font-family: 'Roboto', serif;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: color 0.3s, background-color 0.3s;
+        }
+        .nav-item:hover {
+            color: #8B4513;
+            background-color: #f0e68c;
+        }
         .nav-container {
             position: fixed;
             top: 0px;
@@ -95,7 +125,7 @@
             font-weight: bold;
             color: #1f2937;
         }
-        .ftr{
+        .ftr {
             position: absolute;
         }
     </style>
