@@ -146,18 +146,14 @@
             <a href="index.html#about-us" class="text-gray-800 nav-item font-bold">About us</a>
             <a href="index.html#blog" class="text-gray-800 nav-item font-bold">Blogs</a>
         </div>
-    </nav>
-    <br>
-    <br>
-    <br>
-    <br>    
+    </nav>  
     <center>
     <div class="image-container">
-            <img src="./img/cat3readmore.jpeg" alt="cat">
+            <img src="https://3.bp.blogspot.com/-1UQ1N2quhQM/W02AQL0vfUI/AAAAAAAABJc/f710JM2Jib06yUEPQam6x-dT0QUAlVmPACLcBGAs/s1600/Kucing%2BBengal.png" alt="cat">
         </div>
         <br>
     <div class="container">
-        <div class="text-content">
+        <div class="text-content font-bold">
             <h1>Loki</h1>
             <p>Loki is a charismatic and mischievous cat with a distinctive personality that lives up to his name. His fur is often a striking blend of colors, such as black with orange patches or a mix of tabby stripes, giving him a dynamic and intriguing appearance. His bright, expressive eyes are usually a vivid green or amber, sparkling with playful mischief.</p>
             <p>Loki is known for his boundless energy and curiosity. He’s the kind of cat who is always getting into things, whether it's opening cabinet doors, climbing to high places, or finding new hiding spots. His playful antics can range from stealthily stalking a toy to engaging in spontaneous, energetic bursts of activity. </p>
@@ -291,5 +287,20 @@
         </div>
     </div>
 </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navItems = document.getElementById('nav-items');
+
+        hamburgerBtn.addEventListener('click', function () {
+            navItems.classList.toggle('open');
+        });
+    });
+    hamburgerBtn.addEventListener('click', function () {
+    alert('Button clicked!');
+    navItems.classList.toggle('open');
+});
+
+</script>
 </body>
 </html>
