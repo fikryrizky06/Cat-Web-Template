@@ -9,133 +9,115 @@
     <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
 </head>
 <body>
-        <style>
-           @media (max-width: 768px){
+    <style>
+        @media (max-width: 768px){
             .hamburger-menu {
-              display: block;
-              z-index: 1001;
-              padding:20px;
-              
+                display: block;
+                z-index: 1001;
+                padding:20px;  
             }
 
-        .image-container{
-      height:800px;
-      width:900px;
-    }
-      .text-content{
-        width:900px;
-        height:900px;
-        font-size: 31px;
-    }
-    .gallery{
-        width:900px;
-        height:100%;
-        margin-left:35px;
-    }
+            #nav-items {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background-color: #F8F695;
+                flex-direction: column;
+                padding: 1rem;
+                z-index: 999;
+            }
+            .open{
+                display: flex !important;
+                flex-direction: column;
 
+            }
+            .navv{
+                font-size: 40px;
+            }
+            .nav-item{
+                padding:10px 15px;
+            }
+            .nav-container{
+                padding: 25px 50px !important;
+                height:150px !important;
+            }
+            .logo-container{
+                display: flex;
+                align-items: center;
+                font-size: 36px;
+            }
+            .logo-img{
+                height:80px !important;
+                width:100px !important;
+                margin-right:15px;
+            }
+            .logo-text{
+                font-size: 50px !important;
+            }
 
-    #nav-items {
-        display: none;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        right: 0;
-        background-color: #F8F695;
-        flex-direction: column;
-        padding: 1rem;
-        z-index: 999;
-    }
-    .open{
-        display: flex !important;
-        flex-direction: column;
-
-    }
-    .navv{
-        font-size: 40px;
-    }
-    .nav-item{
-        padding:10px 15px;
-    }
-    .nav-container{
-        padding: 25px 50px !important;
-        height:150px !important;
-    }
-    .logo-container{
-        display: flex;
-        align-items: center;
-        font-size: 36px;
-    }
-    .logo-img{
-        height:80px !important;
-        width:100px !important;
-        margin-right:15px;
-    }
-    .logo-text{
-        font-size: 50px !important;
-    }
-
-   .hamburger-menu svg{
-    width:80px;
-    height:80px;
-   }
-    
-}
-     body {
-            overflow-x: hidden;
+            .hamburger-menu svg{
+                width:80px;
+                height:80px;
+            }
         }
-        .nav-item {
-        font-family: 'Roboto', serif;
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
-        transition: color 0.3s, background-color 0.3s; /* Added transition for smooth color change */
-    }
-    .nav-item:hover {
-        color: #8B4513; /* Brown color on hover */
-    }
-        .nav-container {
-            position: fixed;
-            top: 0px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            height: 80px;
-            border-radius: 0 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-            font-size: large;
-            background-color:#ffb64d;
-        }
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
-        .logo-img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 0.5rem;
-        }
-        .logo-text {
+        body {
+                overflow-x: hidden;
+            }
+            .nav-item {
             font-family: 'Roboto', serif;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #1f2937;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: color 0.3s, background-color 0.3s; /* Added transition for smooth color change */
         }
-        .ftr{
-            position: absolute;
+        .nav-item:hover {
+            color: #8B4513; /* Brown color on hover */
         }
-        .content{
-            width:100%;
-            margin:auto;
-            text-align: center;
-            margin-left: 120px;
-        }
-        .image-container{
-            width:80%
-        }
+            .nav-container {
+                position: fixed;
+                top: 0px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 100%;
+                height: 80px;
+                border-radius: 0 0;
+                z-index: 1000;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 2rem;
+                font-size: large;
+                background-color:#ffb64d;
+            }
+            .logo-container {
+                display: flex;
+                align-items: center;
+            }
+            .logo-img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-right: 0.5rem;
+            }
+            .logo-text {
+                font-family: 'Roboto', serif;
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: #1f2937;
+            }
+            .ftr{
+                position: absolute;
+            }
+            .content{
+                width:100%;
+                margin:auto;
+                text-align: center;
+                margin-left: 120px;
+            }
+            .image-container{
+                width:80%
+            }
     </style>
     <nav class="py-3 nav-container">
         <div class="logo-container">
@@ -169,8 +151,8 @@
             <p>Loki is known for his boundless energy and curiosity. He’s the kind of cat who is always getting into things, whether it's opening cabinet doors, climbing to high places, or finding new hiding spots. His playful antics can range from stealthily stalking a toy to engaging in spontaneous, energetic bursts of activity. </p>
             <p>Despite his playful and sometimes impish behavior, Loki has a charming and affectionate side. He enjoys interacting with his human companions, often following them around or playfully nudging them for attention. His purring is a soothing backdrop to his occasional bursts of playful chaos.</p>
         </div>
-        </center>
     </div>
+</center>
     <br>
     <br>
 
